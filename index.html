@@ -10,11 +10,28 @@
     <img src="fundo-site.jpg" alt="Texto alternativo aqui">
     <form>
         <h3>Cadastro</h3>
+        <div class="botao">
         <input type = "text" placeholder = "login" id = "login">
         <p><input type = "password" placeholder = "senha" id = "senha"></p>
         <p><input type = "email" placeholder = "email" id = "email"></p> 
         <p><input type = "number" placeholder = "number" id = "number"></p>
-        <p><input type = "submit" onclick = logar () ; return false></p>
+        <p><input type = "submit" onclick = "logar ()"; return false></p>
+        </div>
         </form>
+
+        <script>
+            function logar () {
+                var login = document.getElementById("login").value;
+                var password = document.getElementById("senha").value;
+                var email = document.getElementById("email").value;
+                var number = document.getElementById("number").value;
+                if (login == "admin" && senha == "admin") {
+                    location.href="home.html";
+                } else {
+                    alert("usuario ou senha incorretos");
+                }
+            }
+        </script>
 </body>
 </html>
+
